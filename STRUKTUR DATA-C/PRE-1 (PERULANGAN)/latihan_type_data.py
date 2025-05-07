@@ -129,17 +129,17 @@ data = data + [10, 20]
 print(data)
 
 # Operasi pengulangan list
-list = [1, 2]
-list = list * 3
-print(list)
+lisst = [1, 2]
+lisst = lisst * 3
+print(lisst)
 
 # Operasi mengukur panjang list
 print(len(data))
-print(len(list))
+print(len(lisst))
 
 # Operasi mengecek keanggotaan pada list
 print(20 in data)
-print(13 in list)
+print(13 in lisst)
 
 # Fungsi pada list
 # Fungsi pada list 
@@ -208,18 +208,18 @@ for i in range(jumlah):
 # Tampilkan semua data
 print("\nData Mahaiswa:")
 print("Nama\tNilai\t\tRata-rata")
-for siswa in 'data_siswa':
+for siswa in data_mahasiswa:
     print(f"{siswa[0]}\t{siswa[1]}\t{siswa[2]:.2f}")
 
 # Tampilkan siswa yang lulus
 print("\nMahasiswa Lulus (>= 75):")
-for siswa in 'data_siswa':
+for siswa in data_mahasiswa:
     if siswa[2] >= 75:
         print(f"{siswa[0]} - {siswa[2]:.2f}")
 
 # Tuples
 # Cara Membuat Tuple di Python
-t = (nilai_satu, "objek_dua") # type: ignore
+#t = (nilai_satu, "objek_dua") # type: ignore
 t = (1234, 'Hello World')
 t1 = (1, 2, 3)
 t2 = "a", "b", "c"        # Tanpa tanda kurung juga valid
@@ -252,7 +252,7 @@ print(nama[1])
 t = (1, 5, 10, 15)
 
 # mengubah isi elemen tuple
-t[0] = 0
+ #t[0] = 0
 
 # membuat tuple
 angka = (10, 20, 30, 40)
@@ -373,6 +373,10 @@ print("NIDN Saya adalah %s" % dict.get('NIDN'))
 
 # Mengubah Nilai Item Dictionary
 nama_dict['kunci'] = 'Nilai_baru'
+data = {
+    "nama": "adam bachtiar maulachela",
+    "status": True
+}
 # Mengubah nilai item dictionary dict dengan key
 data['status'] = False
 
