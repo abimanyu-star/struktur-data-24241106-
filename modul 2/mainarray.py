@@ -1,17 +1,3 @@
-# Percobaan 1 : Array
-# Praktek 1 : Membuat array
-# impor library numpy
-import numpy as np
-
-# Cara Membuat Array dengan NumPy
-# impor library numpy
-import numpy as np
-
-# membuat array dengan numpy
-arr1 = np.array([1, 2, 3])           # 1D array
-arr2 = np.array([[1, 2], [3, 4]])    # 2D array (matriks)
-
-# Praktek 1 :
 # impor library numpy
 import numpy as np
 
@@ -21,9 +7,6 @@ nilai_siswa = np.array([85, 55, 40, 90])
 # akses data pada array
 print(nilai_siswa[3])
 
-# Operasi Dasar Array
-# Operasi paling dasar pada array yang wajib dipahami adalah bagaimana cara mengakses array, mengubah nilai pada elemen tertentu, dan mendapatkan informasi ukuran dan dimensi dari array.
-# Praktek 2 :
 # impor libaray numpy
 import numpy as np
 
@@ -48,9 +31,6 @@ print("Ukuran Array : ", nilai_siswa_1.shape)
 print("Ukuran Array : ", nilai_siswa_2.shape)
 print("Dimensi Array : ", nilai_siswa_2.ndim)
 
-# Operasi Artimatika
-# Sebagaimana tipe data yang lainnya array juga memiliki operasi artimatika, artinya kita dapat melakukan manipulasi terhadap nilai array dengan memanfaatkan operasi aritmatika seperti penjumlahan dan lainnya.
-# Praktek 3 :
 # impor library numpy
 import numpy as np
 
@@ -70,14 +50,6 @@ print(arr[1:3])    # array([20, 30])
 for x in arr:
     print(x)
 
-# Traversal
-# Pada array mengunjungi satu per satu elemen array dari elemen pada indeks pertama sampai terakhir, disebut sebagai Traversal.
-arr_1 = [10, 20, 30, 40, 50]
-print(arr_1)
-
-# Linear Traversal
-# Proses mengunjungi setiap elemen array secara berurutan, dimulai dari elemen pertama dan berlanjut ke elemen terakhir.
-# Praktek 4
 # membuat array
 arr = [1, 2, 3, 4, 5]
 
@@ -87,9 +59,6 @@ for i in arr:
     print(i, end=" ")
 print()
 
-# Reverse Traversal
-# Proses mengunjungi setiap elemen array mulai dari elemen terakhir dan bergerak menuju elemen pertama.
-# Praktek 5
 # membuat array
 arr = [1, 2, 3, 4, 5]
 
@@ -99,8 +68,6 @@ for i in range(len(arr) - 1, -1, -1):
     print(arr[i], end=" ")
 print()
 
-# traversal menggunakan metode perulangan while
-# Praktek 7
 # membuat array
 arr = [1, 2, 3, 4, 5]
 
@@ -115,7 +82,6 @@ while i < n:
     i += 1
 print()
 
-# Praktek 8
 # membuat array
 arr = [1, 2, 3, 4, 5]
 
@@ -132,10 +98,6 @@ while start < end:
     end -= 1
 print(arr)
 
-# Insertion
-# Insertion atau Penyisipan dalam array melibatkan penempatan elemen pada indeks tertentu sambil menggeser elemen yang ada sesuai dengan itu.
-# Mari kita implementasikan penyisipan array pada akhir elemen menggunakan .append() atau fungsi yang di gunakan untuk menambahkan satu elemen ke akhir ke sebuah daftar list yang sudah ada melalui code python berikut ini :
-# Praktek 9
 # membuat array
 arr = [12, 16, 20, 40, 50, 70]
 
@@ -154,10 +116,7 @@ print("Array Setelah Insertion : ", arr)
 # cetak panjang array setelah penyisipan
 print("Panjang Array : ", len(arr))
 
-# Insertion Pada Tengah Elemen Array
-# Operasi penyisipan ke dalam array pada posisi mana pun (ditengah, bukan awal atau akhir elemen) dapat dilakukan dengan menggeser elemen ke kanan, yang berada di sisi kanan posisi yang diperlukan.
-# Sekarang coba kita implementasikan pada code python menggunakan .insert(pos, x) atau metode yang di gunakan untuk menyisipkan sebuah elemen ke posisi tertentu, berikut ini
-# Praktek 10
+
 # membuat array
 arr = [12, 16, 20, 40, 50, 70]
 
@@ -176,12 +135,6 @@ print("Array Setelah Insertion : ", arr)
 # cetak panjang array setelah penyisipan
 print("Panjang Array : ", len(arr))
 
-# Deletion (Penghapusan)
-# Dalam Python elemen dalam array/list tidak hanya bisa disisipkan tetapi juga dapat dihapus. Terdapat tiga cara untuk menghapus elemen dari array/list, yaitu :
-# remove(), menghapus elemen array yang pertama kali muncul
-# pop(), menghapus elemen array pada indeks yang spesifik atau bisa juga menghapus elemen terakhir dari array jika indeksnya tidak spesifik ditentukan
-# del_statement, menghapus elemen array pada indeks yang spesifik
-# Praktek 11
 # membuat array
 a = [10, 20, 30, 40, 50]
 print("Array Sebelum Deletion : ", a)
@@ -198,3 +151,151 @@ print("Setelah pop(1):", a)
 # Menghapus elemen pertama (10)
 del a[0]  
 print("Setelah del a[0]:", a)
+
+
+# impor library numpy
+import numpy as np
+
+# membuat matiks dengan numpy
+matriks_np = np.array([[1,2,3],
+                        [4,5,6],
+                        [7,8,9]])
+
+
+# Program penjumlahan matriks yang dibuat dari list
+
+X = [[12,7,3],
+    [4,5,6],
+    [7,8,9]]
+
+Y = [[5,8,1],
+    [6,7,3],
+    [4,5,9]]
+
+result = [[0,0,0],
+         [0,0,0],
+         [0,0,0]]
+
+# proses penjumlahan dua matriks menggunakan nested loop
+# mengulang sebanyak row (baris)
+for i in range(len(X)):
+   # mengulang sebanyak column (kolom)
+   for j in range(len(X[0])):
+       result[i][j] = X[i][j] + Y[i][j]
+
+print("Hasil Penjumlahan Matriks dari LIST") 
+
+# cetak hasil penjumlahan secara iteratif
+for r in result:   
+   print(r)
+
+
+# impor library numpy
+import numpy as np
+
+# Membuat matriks dengan numpy
+X = np.array([
+    [12,7,3],
+    [4,5,6],
+    [7,8,9]])
+
+Y = np.array(
+    [[5,8,1],
+    [6,7,3],
+    [4,5,9]])
+
+# Operasi penjumlahan dua matrik numpy
+result = X + Y
+
+# cetak hasil
+print("Hasil Penjumlahan Matriks dari NumPy")
+print(result)
+
+
+# impor library numpy
+import numpy as np
+
+# Membuat matriks dengan numpy
+X = np.array([
+    [12,7,3],
+    [4,5,6],
+    [7,8,9]])
+
+Y = np.array(
+    [[5,8,1],
+    [6,7,3],
+    [4,5,9]])
+
+# Operasi pengurangan dua matrik numpy
+result = X - Y
+
+# cetak hasil
+print("Hasil Pengurangan Matriks dari NumPy")
+print(result)
+
+
+# impor library numpy
+import numpy as np
+
+# Membuat matriks dengan numpy
+X = np.array([
+    [12,7,3],
+    [4,5,6],
+    [7,8,9]])
+
+Y = np.array(
+    [[5,8,1],
+    [6,7,3],
+    [4,5,9]])
+
+# Operasi perkalian dua matrik numpy
+result = X * Y
+
+# cetak hasil
+print("Hasil Perkalian Matriks dari NumPy")
+print(result)
+
+
+# Praktek 17 : Operasi Pembagian Matriks dengan numpy
+# impor library numpy
+import numpy as np
+
+# Membuat matriks dengan numpy
+X = np.array([
+    [12,7,3],
+    [4,5,6],
+    [7,8,9]])
+
+Y = np.array(
+    [[5,8,1],
+    [6,7,3],
+    [4,5,9]])
+
+# Operasi pembagian dua matrik numpy
+result = X / Y
+
+# cetak hasil
+print("Hasil Pembagian Matriks dari NumPy")
+print(result)
+
+
+# impor library numpy
+import numpy as np
+
+# membuat matriks
+matriks_a = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+# cetak matriks
+print("Matriks Sebelum Transpose")
+print(matriks_a)
+
+# transpose matriks_a
+balik = matriks_a.transpose()
+
+# cetak matriks setelah dibalik
+print("Matriks Setelah Transpose")
+print(balik)
